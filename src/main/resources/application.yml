@@ -1,6 +1,3 @@
-server:
-  port: 9999
-
 #支付宝支付参数配置
 alipay:
   #应用ID,您的APPID，收款账号既是您的APPID对应支付宝账号
@@ -35,3 +32,6 @@ wxpay:
   refundNotify:
   #根目录下的证书名称
   certName: 'wx_pay_cert.p12'
+
+server:
+  port: 9999
