@@ -5,9 +5,11 @@ import com.easy.pay.spring.boot.pay.demo.service.WebSocketService;
 import com.niezhiliang.simple.pay.dto.AlipayPcPayDTO;
 import com.niezhiliang.simple.pay.dto.AlipayQrcodeDTO;
 import com.niezhiliang.simple.pay.dto.AlipayRefundDTO;
+import com.niezhiliang.simple.pay.dto.AlipayRefundQueryDTO;
 import com.niezhiliang.simple.pay.utils.PayUtils;
 import com.niezhiliang.simple.pay.vos.AlipayCallBackVO;
 import com.niezhiliang.simple.pay.vos.AlipayQrcodeVO;
+import com.niezhiliang.simple.pay.vos.AlipayRefundQueryVO;
 import com.niezhiliang.simple.pay.vos.AlipayRefundVO;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -71,5 +73,15 @@ public class AliPayController {
     @RequestMapping(value = "refund")
     public AlipayRefundVO refund(AlipayRefundDTO refundDTO) {
         return PayUtils.alipayRefund(refundDTO);
+    }
+
+    /**
+     * 支付宝退款查询
+     * @param refundQueryDTO
+     * @return
+     */
+    @RequestMapping(value = "refundQuery")
+    public AlipayRefundQueryVO refundQuery(AlipayRefundQueryDTO refundQueryDTO) {
+        return PayUtils.alipayRefundQuery(refundQueryDTO);
     }
 }

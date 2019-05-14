@@ -67,18 +67,7 @@
         var price = $("#price").val();
         var descript = $("#descript").val();
 
-        //请求后端支付宝网站支付接口
-        $.ajax({
-            url: "alipay/pcpay?totalAmount="+price+"&subject="+title+"&outTradeNo="+oriderId+"&body="+descript,
-            type: 'GET',
-            dataType: 'text',
-            success: function(data){
-                console.log(data)
-                window.location.href=data;
-            }
-
-        })
-        
+        window.location.href="http://127.0.0.1:9999/alipay/pcpay?totalAmount="+price+"&subject="+title+"&outTradeNo="+oriderId+"&body="+descript;
     }
 </script>
 </body>

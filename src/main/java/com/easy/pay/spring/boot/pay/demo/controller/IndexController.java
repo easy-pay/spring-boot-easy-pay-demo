@@ -85,6 +85,10 @@ public class IndexController {
         return "wx/wxrefund";
     }
 
+    /**
+     * 退款查询
+     * @return
+     */
     @RequestMapping(value = "wxrefundquery")
     public String wxRefunQuery() {
         return "wx/refundQuery";

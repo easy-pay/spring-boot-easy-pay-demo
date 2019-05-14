@@ -2,7 +2,7 @@ package com.easy.pay.spring.boot.pay.demo.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.easy.pay.spring.boot.pay.demo.service.WebSocketService;
-import com.niezhiliang.simple.pay.dto.WXCloseOrderDTO;
+import com.niezhiliang.simple.pay.dto.WxpayCloseOrderDTO;
 import com.niezhiliang.simple.pay.dto.WxpayQrcodeDTO;
 import com.niezhiliang.simple.pay.dto.WxpayRefundDTO;
 import com.niezhiliang.simple.pay.dto.WxpayRefundQueryDTO;
@@ -39,7 +39,7 @@ public class WxpayController {
      * @return
      */
     @RequestMapping(value = "closeOrder")
-    public WxpayCloseOrderVO closeOrder(WXCloseOrderDTO closeOrderDTO) {
+    public WxpayCloseOrderVO closeOrder(WxpayCloseOrderDTO closeOrderDTO) {
         return PayUtils.wxpayCloseOrder(closeOrderDTO);
     }
 
