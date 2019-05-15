@@ -1,0 +1,1 @@
+docker rmi EasyPay/spring-boot-easy-pay-demo:1.0.0

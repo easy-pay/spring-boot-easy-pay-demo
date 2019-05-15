@@ -23,25 +23,25 @@ import javax.servlet.http.HttpServletRequest;
 public class WxpayController {
 
 
-    /**
-     * 微信二维码支付
-     * @param qrcodeDTO
-     * @return
-     */
-    @RequestMapping(value = "qrcode")
-    public WxpayQrcodeVO wxQrcode(WxpayQrcodeDTO qrcodeDTO) {
-
-        return PayUtils.wxpayQrcode(qrcodeDTO);
-    }
-
-    /**
-     * 微信关闭订单
-     * @return
-     */
-    @RequestMapping(value = "closeOrder")
-    public WxpayCloseOrderVO closeOrder(WxpayCloseOrderDTO closeOrderDTO) {
-        return PayUtils.wxpayCloseOrder(closeOrderDTO);
-    }
+//    /**
+//     * 微信二维码支付
+//     * @param qrcodeDTO
+//     * @return
+//     */
+//    @RequestMapping(value = "qrcode")
+//    public WxpayQrcodeVO wxQrcode(WxpayQrcodeDTO qrcodeDTO) {
+//
+//        return PayUtils.wxpayQrcode(qrcodeDTO);
+//    }
+//
+//    /**
+//     * 微信关闭订单
+//     * @return
+//     */
+//    @RequestMapping(value = "closeOrder")
+//    public WxpayCloseOrderVO closeOrder(WxpayCloseOrderDTO closeOrderDTO) {
+//        return PayUtils.wxpayCloseOrder(closeOrderDTO);
+//    }
 
     /**
      * 微信支付回调
@@ -60,23 +60,23 @@ public class WxpayController {
         return "FAILER";
     }
 
-    /**
-     * 微信退款
-     * @param wxpayRefundDTO
-     * @return
-     */
-    @RequestMapping(value = "refund")
-    public WxpayRefundVO wxRefund(WxpayRefundDTO wxpayRefundDTO) {
-        return PayUtils.wxRefund(wxpayRefundDTO);
-    }
-
-    /**
-     * 微信退款查询
-     * @param refundQueryDTO
-     * @return
-     */
-    @RequestMapping(value = "refundQuery")
-    public WxpayRefundQueryVO refundQuery(WxpayRefundQueryDTO refundQueryDTO) {
-        return PayUtils.wxRefundQuery(refundQueryDTO);
-    }
+//    /**
+//     * 微信退款
+//     * @param wxpayRefundDTO
+//     * @return
+//     */
+//    @RequestMapping(value = "refund")
+//    public WxpayRefundVO wxRefund(WxpayRefundDTO wxpayRefundDTO) {
+//        return PayUtils.wxRefund(wxpayRefundDTO);
+//    }
+//
+//    /**
+//     * 微信退款查询
+//     * @param refundQueryDTO
+//     * @return
+//     */
+//    @RequestMapping(value = "refundQuery")
+//    public WxpayRefundQueryVO refundQuery(WxpayRefundQueryDTO refundQueryDTO) {
+//        return PayUtils.wxRefundQuery(refundQueryDTO);
+//    }
 }
