@@ -55,7 +55,7 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>1.0.0</version>
                 <configuration>
-                    <imageName>EasyPay/${project.artifactId}:${project.version}</imageName>
+                    <imageName>easypay/${project.artifactId}:${project.version}</imageName>
                     <baseImage>java:8</baseImage>
                     <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
                     <resources>
