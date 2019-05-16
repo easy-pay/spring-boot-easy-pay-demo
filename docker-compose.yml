@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  easypay:
+    image: easypay/spring-boot-easy-pay-demo:1.0.0
+    restart: always
+    container_name: easypay
+    hostname: easypay
+    ports:
+      - "9999:9999"
+    volumes:
+      - /etc/timezone:/etc/timezone
+      - /etc/localtime:/etc/localtime

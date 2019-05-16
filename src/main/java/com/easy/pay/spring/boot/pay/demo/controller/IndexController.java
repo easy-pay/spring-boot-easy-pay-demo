@@ -1,17 +1,17 @@
-//package com.easy.pay.spring.boot.pay.demo.controller;
-//
-//import org.springframework.stereotype.Controller;
-//import org.springframework.web.bind.annotation.RequestMapping;
-//
-///**
-// * @Author NieZhiLiang
-// * @Email nzlsgg@163.com
-// * @Date 2019/5/9 上午9:30
-// */
-//@RequestMapping(value = "/")
-//@Controller
-//public class IndexController {
-//
+package com.easy.pay.spring.boot.pay.demo.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+/**
+ * @Author NieZhiLiang
+ * @Email nzlsgg@163.com
+ * @Date 2019/5/9 上午9:30
+ */
+@RequestMapping(value = "/")
+@Controller
+public class IndexController {
+
 //    /**
 //     * 首页
 //     * @return
@@ -47,16 +47,16 @@
 //    public String aliPcPay(){
 //        return "alipay/alipcpay";
 //    }
-//
-//    /**
-//     * 支付宝回调页面
-//     * @return
-//     */
-//    @RequestMapping(value = "success")
-//    public String aliReturnUrl(){
-//        return "alipay/success";
-//    }
-//
+
+    /**
+     * 支付宝回调页面
+     * @return
+     */
+    @RequestMapping(value = "success")
+    public String aliReturnUrl(){
+        return "alipay/success";
+    }
+
 //    /**
 //     * 微信二维码支付页面
 //     * @return
@@ -93,6 +93,6 @@
 //    public String wxRefunQuery() {
 //        return "wx/refundQuery";
 //    }
-//
-//
-//}
+
+
+}
