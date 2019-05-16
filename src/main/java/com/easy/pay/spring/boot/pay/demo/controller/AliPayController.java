@@ -31,24 +31,24 @@ public class AliPayController {
      */
     private static final String SUCCESS_PAY_STATUS = "TRADE_SUCCESS";
 
-//    /**
-//     * 生成二维码
-//     * @param qrcodeDTO
-//     * @return
-//     */
-//    @RequestMapping(value = "qrcode")
-//    public AlipayQrcodeVO qrcode(AlipayQrcodeDTO qrcodeDTO) {
-//
-//        return PayUtils.alipayQrcode(qrcodeDTO);
-//    }
-//
-//    /**
-//     * 支付宝pc端支付
-//     */
-//    @RequestMapping(value = "pcpay")
-//    public String pcPay(AlipayPcPayDTO pcPayDTO){
-//        return PayUtils.alpayPcPay(pcPayDTO);
-//    }
+    /**
+     * 生成二维码
+     * @param qrcodeDTO
+     * @return
+     */
+    @RequestMapping(value = "qrcode")
+    public AlipayQrcodeVO qrcode(AlipayQrcodeDTO qrcodeDTO) {
+
+        return PayUtils.alipayQrcode(qrcodeDTO);
+    }
+
+    /**
+     * 支付宝pc端支付
+     */
+    @RequestMapping(value = "pcpay")
+    public String pcPay(AlipayPcPayDTO pcPayDTO){
+        return PayUtils.alpayPcPay(pcPayDTO);
+    }
 
     /**
      * 支付回调
@@ -67,21 +67,21 @@ public class AliPayController {
         return aliPayCallBackVO.getShouldResonse();
     }
 
-//    /**
-//     * 支付宝退款
-//     */
-//    @RequestMapping(value = "refund")
-//    public AlipayRefundVO refund(AlipayRefundDTO refundDTO) {
-//        return PayUtils.alipayRefund(refundDTO);
-//    }
-//
-//    /**
-//     * 支付宝退款查询
-//     * @param refundQueryDTO
-//     * @return
-//     */
-//    @RequestMapping(value = "refundQuery")
-//    public AlipayRefundQueryVO refundQuery(AlipayRefundQueryDTO refundQueryDTO) {
-//        return PayUtils.alipayRefundQuery(refundQueryDTO);
-//    }
+    /**
+     * 支付宝退款
+     */
+    @RequestMapping(value = "refund")
+    public AlipayRefundVO refund(AlipayRefundDTO refundDTO) {
+        return PayUtils.alipayRefund(refundDTO);
+    }
+
+    /**
+     * 支付宝退款查询
+     * @param refundQueryDTO
+     * @return
+     */
+    @RequestMapping(value = "refundQuery")
+    public AlipayRefundQueryVO refundQuery(AlipayRefundQueryDTO refundQueryDTO) {
+        return PayUtils.alipayRefundQuery(refundQueryDTO);
+    }
 }
