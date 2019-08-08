@@ -5,7 +5,8 @@
 #### 完善配置
 
 > 要想本地调试的话请使用`ngrok`做一个内网穿透，这里推荐一个Mac环境的内网穿透教程
-`https://www.jianshu.com/p/5c9d77d7a8f9`
+
+https://www.jianshu.com/p/5c9d77d7a8f9
 
 ```yaml
 #支付宝支付参数配置
