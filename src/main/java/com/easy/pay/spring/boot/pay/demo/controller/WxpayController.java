@@ -8,6 +8,7 @@ import com.niezhiliang.simple.pay.dto.WxpayRefundDTO;
 import com.niezhiliang.simple.pay.dto.WxpayRefundQueryDTO;
 import com.niezhiliang.simple.pay.utils.PayUtils;
 import com.niezhiliang.simple.pay.vos.*;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,6 +21,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @RestController
 @RequestMapping(value = "wx")
+@Slf4j
 public class WxpayController {
 
 
@@ -52,6 +54,7 @@ public class WxpayController {
     public String payCallBack(HttpServletRequest request) {
 
         WxpayCallBackVO wxpayCallBackVO = PayUtils.wxpayNotify(request);
+        log.info(wxpayCallBackVO.getOutTradeNo() +"-----"+ wxpayCallBackVO.getResultCode());
         //判断验签是否通过并且支付结果是不是成功
         if (wxpayCallBackVO.getSignResult() && wxpayCallBackVO.getResultCode().equals("SUCCESS")) {
             WebSocketService.sendMessage(JSON.toJSONString(wxpayCallBackVO),wxpayCallBackVO.getOutTradeNo());

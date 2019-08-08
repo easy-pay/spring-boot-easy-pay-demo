@@ -19,7 +19,7 @@ alipay:
   logPath: /tmp/
 wxpay:
   #公众号appid
-  appId:
+  appId: ''
   #商户id
   mchId: ''
   #支付api安全密钥
@@ -27,7 +27,7 @@ wxpay:
   #支付类型
   tradeType: 'NATIVE'
   #支付结果回调地址
-  payNotify: 'http://www.niezhiliang.com:9999/wx/callback'
+  payNotify: 'http://08222d1f.ngrok.io/wx/callback'
   #退款结果回调
   refundNotify:
   #根目录下的证书名称
