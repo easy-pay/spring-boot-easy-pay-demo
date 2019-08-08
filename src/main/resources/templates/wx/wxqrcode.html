@@ -88,10 +88,10 @@
 
         //这里测试的时候无需修改，该项目我放到了线上，你支付成功就会返回websocket信息给你
         if ('WebSocket' in window){
-            ws = new WebSocket("ws://www.niezhiliang.com:9999/easypay/"+oriderId)
+            ws = new WebSocket("ws://127.0.0.1:9999/easypay/"+oriderId)
         }
         else if ('MozWebSocket' in window){
-            ws = new MozWebSocket("ws://www.niezhiliang.com:9999/easypay/"+oriderId)
+            ws = new MozWebSocket("ws://127.0.0.1:9999/easypay/"+oriderId)
         }
         else{
             alert("该浏览器不支持websocket");

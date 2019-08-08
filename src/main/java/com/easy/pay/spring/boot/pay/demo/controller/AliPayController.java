@@ -11,6 +11,7 @@ import com.niezhiliang.simple.pay.vos.AlipayCallBackVO;
 import com.niezhiliang.simple.pay.vos.AlipayQrcodeVO;
 import com.niezhiliang.simple.pay.vos.AlipayRefundQueryVO;
 import com.niezhiliang.simple.pay.vos.AlipayRefundVO;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,6 +25,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @RestController
 @RequestMapping(value = "alipay")
+@Slf4j
 public class AliPayController {
 
     /**
@@ -57,6 +59,8 @@ public class AliPayController {
     @RequestMapping(value = "callback")
     public String payCallBack(HttpServletRequest request){
         AlipayCallBackVO aliPayCallBackVO = PayUtils.alipayPayCallBack(request);
+
+        log.info(aliPayCallBackVO.getOut_trade_no() + "-----" + aliPayCallBackVO.getTrade_status());
 
         //支付成功通过websocket将回调结果返回给前端，我们生产环境需要判断是否回调结果状态并改变数据库中订单的值
         if(aliPayCallBackVO.getTrade_status().equals(SUCCESS_PAY_STATUS)) {
