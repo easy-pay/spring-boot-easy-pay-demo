@@ -1,0 +1,25 @@
+#支付宝支付参数配置
+alipay:
+  #应用ID,您的APPID，收款账号既是您的APPID对应支付宝账号
+  appId:
+  #商户私钥，您的PKCS8格式RSA2私钥
+  privateKey:
+  #支付宝公钥,查看地址：https://openhome.alipay.com/platform/keyManage.htm 对应APPID下的支付宝公钥。
+  publicKey:
+  #服务器异步通知页面路径  需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
+  notifyUrl: http://40c0dd48.ngrok.io/alipay/callback
+  #页面跳转同步通知页面路径 需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
+  returnUrl: http://www.niezhiliang.com:9999/success
+wxpay:
+  #公众号appid
+  appId:
+  #商户id
+  mchId:
+  #支付api安全密钥
+  mchKey:
+  #支付结果回调地址
+  payNotify: http://40c0dd48.ngrok.io/wx/callback
+  #退款结果回调
+  refundNotify:
+  #根目录下的证书名称
+  certName: wx_pay_cert.p12
